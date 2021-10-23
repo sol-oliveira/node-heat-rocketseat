@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "e3a27f5d-713b-42f9-bd01-ef0813ed7815",
+		"name": "NLW-7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/messages/last3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"messages",
+						"last3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/profile",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"0945f56db60b5b9f1aba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/authenticate",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOm51bGwsImF2YXRhcl91cmwiOiJodHRwczovL2F2YXRhcnMuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3UvNzE2MTEyNzM_dj00IiwiaWQiOiI5MTdjMjM5MS1lY2RmLTQxNzMtYjFhNC04NjRjZjU1ZjQ1OTkifSwiaWF0IjoxNjM1MDI3NzQ0LCJleHAiOjE2MzUxMTQxNDQsInN1YiI6IjkxN2MyMzkxLWVjZGYtNDE3My1iMWE0LTg2NGNmNTVmNDU5OSJ9.YbLohfuNYFp6UhDLJYNsmu_be2IhCnfp3iY5YCmkGuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Primeira mensagem\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/messages",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:4000"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOm51bGwsImF2YXRhcl91cmwiOiJodHRwczovL2F2YXRhcnMuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3UvNzE2MTEyNzM_dj00IiwiaWQiOiI5MTdjMjM5MS1lY2RmLTQxNzMtYjFhNC04NjRjZjU1ZjQ1OTkifSwiaWF0IjoxNjM1MDI3NzQ0LCJleHAiOjE2MzUxMTQxNDQsInN1YiI6IjkxN2MyMzkxLWVjZGYtNDE3My1iMWE0LTg2NGNmNTVmNDU5OSJ9.YbLohfuNYFp6UhDLJYNsmu_be2IhCnfp3iY5YCmkGuQ"
+		}
+	]
+}
